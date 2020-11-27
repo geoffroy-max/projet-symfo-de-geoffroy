@@ -9,11 +9,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class BlogController extends AbstractController
 {
     /**
+     * permet d 'afficher la page d'accueil
+     */
+    /**
      * @Route("/blog", name="blog")
      */
-    public function index(): Response
+    public function home(): Response
     {
-        return $this->render('blog/index.html.twig', [
+        return $this->render('blog/home.html.twig', [
             'controller_name' => 'BlogController',
         ]);
     }
