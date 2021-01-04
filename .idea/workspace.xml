@@ -11,19 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1b80e6f-1c97-4835-a281-2087ebb79627" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AirBNB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AirBNB.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jquery.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ad/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ad/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ad/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ad/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/header.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +159,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -177,7 +176,18 @@
       <workItem from="1605102137119" duration="19306000" />
       <workItem from="1605358226373" duration="4841000" />
       <workItem from="1605655861252" duration="29639000" />
-      <workItem from="1606307378060" duration="28959000" />
+      <workItem from="1606307378060" duration="30535000" />
+      <workItem from="1607279015059" duration="78000" />
+      <workItem from="1607631165731" duration="17751000" />
+      <workItem from="1607907812724" duration="40630000" />
+      <workItem from="1608285800875" duration="25668000" />
+      <workItem from="1608562917869" duration="4674000" />
+      <workItem from="1608585067598" duration="12311000" />
+      <workItem from="1609112917409" duration="19520000" />
+      <workItem from="1609297464887" duration="2922000" />
+      <workItem from="1609337537358" duration="6185000" />
+      <workItem from="1609438751489" duration="31000" />
+      <workItem from="1609438827278" duration="25062000" />
     </task>
     <servers />
   </component>
@@ -201,13 +211,37 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1605099668855" />
+    <state x="394" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1607824102688">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="394" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1607824102688" />
+    <state x="357" y="70" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1607279040568">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="357" y="70" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1607279040568" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608503772339">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1608503772339" />
+    <state x="282" y="0" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607713148266">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="282" y="0" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607713148266" />
+    <state x="357" y="0" key="FileChooserDialogImpl" timestamp="1609375836387">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="357" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609375836387" />
     <state x="409" y="0" key="NewPhpClassDialog" timestamp="1605100420746">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="409" y="0" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1605100420746" />
-    <state x="176" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1605128919469">
+    <state x="170" y="156" key="run.anything.popup" timestamp="1608140141375">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="176" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605128919469" />
+    <state x="170" y="156" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1608140141375" />
+    <state x="176" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1609772061397">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="176" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609772061397" />
   </component>
 </project>

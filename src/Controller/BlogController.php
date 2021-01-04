@@ -12,7 +12,7 @@ class BlogController extends AbstractController
      * permet d 'afficher la page d'accueil
      */
     /**
-     * @Route("/blog", name="blog")
+     * @Route("/", name="blog")
      */
     public function home(): Response
     {

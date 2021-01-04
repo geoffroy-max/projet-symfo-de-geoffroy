@@ -7,31 +7,7 @@
 <h2 class="my-3">voici les annonces de nos appartements</h2>
     <div class="row">
         {% for ad in ads %}
-            {% set url=path('ads_slug',{'slug':ad.slug})  %}
-
-            <div class="col-md-4">
-                <div class="card bg-light mt-3">
-                    <div class="card-header text-center">
-                        {{ ad.rooms }} chambres, <strong> {{ ad.price }}&euro;/nuit</strong><br>
-                        <small> pas encore note</small>
-                    </div>
-                    <a href="{{ url }}">
-                    <img src="{{ ad.coverImage }}" alt="l'image de l'appartement" style=" height: 200px; width: 100%; display: block">
-                    </a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="{{url}}">
-                            {{ ad.title }}
-                            </a>
-                        </h4>
-                        <P class="card-text">
-                            {{ ad.introduction }}
-                        </P>
-                        <a href="{{ url }}" class="btn btn-secondary"> voir l'annonce</a>
-                    </div>
-
-                </div>
-            </div>
+            {% include'ad/_ad.html.twig' %}
 
         {% endfor %}
     </div>
