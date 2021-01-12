@@ -10,6 +10,7 @@ use App\Form\RegistrationType;
 
 use App\Form\PasswordUpdateType;
 use Doctrine\ORM\EntityManagerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
@@ -82,6 +83,7 @@ return $this->render('account/registration.html.twig',[
      */
     /**
      * @Route("/profile", name="account_profile")
+     * @IsGranted ("ROLE_USER")
      */
     public function profile(Request $request,EntityManagerInterface $manager)
     {$user= $this->getUser();
@@ -106,6 +108,7 @@ return $this->render('account/registration.html.twig',[
      */
     /**
      *@Route("/updatepass", name="account_updatepass")
+     * @IsGranted("ROLE_USER")
      */
 
     public function updatepass(Request $request, EntityManagerInterface $manager, UserPasswordEncoderInterface $encoder)
@@ -146,6 +149,7 @@ return $this->render('account/registration.html.twig',[
      */
     /**
      * @Route("/account", name="account_index")
+     * @IsGranted("ROLE_USER")
      */
     public function myAccount()
     {

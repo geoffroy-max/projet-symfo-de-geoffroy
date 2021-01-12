@@ -38,7 +38,6 @@ class User implements UserInterface
     private $lastName;
 
 
-
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Email(message="votre email doit etre valide")
@@ -56,9 +55,9 @@ class User implements UserInterface
      */
     private $hash;
     /**
-     *@Assert\EqualTo(propertyPath="hash", message="vous n'avez pas correctement confirmé votre mot de passe")
+     * @Assert\EqualTo(propertyPath="hash", message="vous n'avez pas correctement confirmé votre mot de passe")
      */
-public $passwordconfirm;
+    public $passwordconfirm;
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Length(min=10, minMessage="votre introduction doit faire au moins 10 carateres")
@@ -81,6 +80,11 @@ public $passwordconfirm;
      */
     private $ads;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Role::class, mappedBy="users")
+     */
+    private $userRoles;
+
 
     public function getfullName()
     {
@@ -88,21 +92,24 @@ public $passwordconfirm;
     }
 
 
-/**
-* @ORM\PrePersist()
-* @ORM\PreUpdate()
-*/
+    /**
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
     public function initializeSlug()
-    {$slugify= new Slugify();
-        if(empty($this->slug))
-        {
-            $this->slug= $slugify->slugify($this->firstName  . ' ' .  $this->lastName);
+    {
+        $slugify = new Slugify();
+        if (empty($this->slug)) {
+            $this->slug = $slugify->slugify($this->firstName . ' ' . $this->lastName);
         }
     }
 
     public function __construct()
     {
         $this->ads = new ArrayCollection();
+        $this->userRoles = new ArrayCollection();
+        $this->role1s = new ArrayCollection();
+        $this->userRoles2 = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -239,7 +246,19 @@ public $passwordconfirm;
     }
 
     public function getRoles()
+
     {
+        //$roles=$this->userRoles->toArray();
+       // dump($roles);
+        $roles=$this->userRoles->map(function ($role){
+      return $role->getTitle();
+        })->toArray();
+        //
+        $roles[]= 'ROLE_USER';
+        return $roles;
+
+
+
         // TODO: Implement getRoles() method.
         return ['ROLE_USER'];
     }
@@ -265,4 +284,41 @@ public $passwordconfirm;
     {
         // TODO: Implement eraseCredentials() method.
     }
+
+    /**
+     * @return Collection|Role[]
+     */
+    public function getUserRoles(): Collection
+    {
+        return $this->userRoles;
+    }
+
+    public function addUserRole(Role $userRole): self
+    {
+        if (!$this->userRoles->contains($userRole)) {
+            $this->userRoles[] = $userRole;
+            $userRole->addUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserRole(Role $userRole): self
+    {
+        if ($this->userRoles->removeElement($userRole)) {
+            $userRole->removeUser($this);
+        }
+
+        return $this;
+    }
 }
+
+
+
+
+
+
+
+
+
+
