@@ -157,4 +157,16 @@ return $this->render('user/index1.html.twig', [
    'user'=>$this->getUser()
 ]);
     }
+    /**
+     * permet de d'afficher la liste des reservations passée et à venir
+
+     */
+    /**
+     *@Route("/account/booking", name="account_booking")
+     * @return Response
+     */
+    public function bookings()
+    {
+       return $this->render('Account/bookings.html.twig') ;
+    }
 }

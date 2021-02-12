@@ -86,12 +86,25 @@ class User implements UserInterface
     private $userRoles;
 
 
+
+    /**
+     * @ORM\OneToMany(targetEntity=Booking1::class, mappedBy="booker")
+     */
+    private $booking1s;
+
+
+
+
+
+
     public function getfullName()
     {
         return "{$this->firstName}{$this->lastName}";
     }
 
-
+    /**
+     * Callback appélé à chaque fois qu'on affiche une annonce
+     */
     /**
      * @ORM\PrePersist()
      * @ORM\PreUpdate()
@@ -110,6 +123,9 @@ class User implements UserInterface
         $this->userRoles = new ArrayCollection();
         $this->role1s = new ArrayCollection();
         $this->userRoles2 = new ArrayCollection();
+
+        $this->booking1s = new ArrayCollection();
+
     }
 
     public function getId(): ?int
@@ -259,6 +275,9 @@ class User implements UserInterface
 
 
 
+
+
+
         // TODO: Implement getRoles() method.
         return ['ROLE_USER'];
     }
@@ -311,6 +330,53 @@ class User implements UserInterface
 
         return $this;
     }
+
+    /**
+     * @return Collection|Booking1[]
+     */
+    public function getBooking1s(): Collection
+    {
+        return $this->booking1s;
+    }
+
+    public function addBooking1(Booking1 $booking1): self
+    {
+        if (!$this->booking1s->contains($booking1)) {
+            $this->booking1s[] = $booking1;
+            $booking1->setBooker($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBooking1(Booking1 $booking1): self
+    {
+        if ($this->booking1s->removeElement($booking1)) {
+            // set the owning side to null (unless already changed)
+            if ($booking1->getBooker() === $this) {
+                $booking1->setBooker(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 

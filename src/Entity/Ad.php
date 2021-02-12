@@ -28,6 +28,7 @@ class Ad
     private $id;
 
     /**
+     *
      * @ORM\Column(type="string", length=255)
      * @Assert\Length(min=10, max=255, minMessage="le titre doit faire plus de 10 caractere", maxMessage="le titre ne peut pas faire plus de 255 caratere")
      */
@@ -78,9 +79,22 @@ class Ad
      */
     private $Author;
 
+
+
+    /**
+     * @ORM\OneToMany(targetEntity=Booking1::class, mappedBy="ad")
+     */
+    private $booking1s;
+
+
+
+
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
+
+        $this->booking1s = new ArrayCollection();
     }
 
     /**
@@ -93,6 +107,32 @@ class Ad
         {
             $this->slug= $slugify->slugify($this->title);
         }
+    }
+
+    /**
+     * permet d'obtenir un tableau des jours qui ne sont pas disponibles pour l'annonce
+     */
+    public function getNotAvaillableDays()
+    {
+        $notAvaillableDays = [];
+
+
+        foreach ($this->booking1s as $booking1){
+            // calculer les jours qui se trouve  entre la date d'arriver et la date de depart
+            $resultat= range($booking1->getStartDate()->getTimestamp(),$booking1->getEndDate()->getTimestamp(),
+                24*60*60);
+
+
+
+            $days = array_map(function ($dayTimestamp){
+
+                return new \DateTime(date('Y-m-d', $dayTimestamp));
+            }, $resultat);
+
+$notAvaillableDays= array_merge($notAvaillableDays, $days);
+        }
+        return $notAvaillableDays;
+
     }
 
     public function getId(): ?int
@@ -225,4 +265,52 @@ class Ad
 
         return $this;
     }
+
+    /**
+     * @return Collection|Booking1[]
+     */
+    public function getBooking1s(): Collection
+    {
+        return $this->booking1s;
+    }
+
+    public function addBooking1(Booking1 $booking1): self
+    {
+        if (!$this->booking1s->contains($booking1)) {
+            $this->booking1s[] = $booking1;
+            $booking1->setAd($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBooking1(Booking1 $booking1): self
+    {
+        if ($this->booking1s->removeElement($booking1)) {
+            // set the owning side to null (unless already changed)
+            if ($booking1->getAd() === $this) {
+                $booking1->setAd(null);
+            }
+        }
+
+        return $this;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

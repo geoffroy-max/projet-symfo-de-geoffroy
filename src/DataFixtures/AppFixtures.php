@@ -3,6 +3,8 @@
 namespace App\DataFixtures;
 
 use App\Entity\Ad;
+use App\Entity\Booking;
+use App\Entity\Booking1;
 use App\Entity\Image;
 
 
@@ -51,7 +53,7 @@ $faker= Factory::create('fr_FR');
   $users=[];
   $genres= ['male', 'female'];
 for($i=1; $i<=10; $i++) {
-    $user = new User();
+     $user = new User();
     $genre = $faker->randomElements($genres);
     $picture = 'https://randomuser.me/api/portraits/';
     $pictureId = $faker->numberBetween(1, 99). '.jpg';
@@ -106,7 +108,36 @@ for($i=1; $i<=10; $i++) {
 $manager->persist($image);
 
             }
+            // Gestion des reservations
 
+            for($k=1; $k<= mt_rand(0,10); $k++)
+            {
+                $booking1= new Booking1();
+
+                $createdAt = $faker->dateTimeBetween('-6 months');
+                $startDate = $faker->dateTimeBetween('-3 months');
+
+                // gestion de la date de fin
+
+                $duration= mt_rand(3 ,10);
+                $endDate = (clone $startDate)->modify("+$duration days");
+
+                $amount  = $ad->getPrice()*$duration ;
+                $booker  = $users[mt_rand(0 ,count($users)-1)];
+                $comment =$faker->paragraph();
+
+                $booking1->setBooker($booker)
+                    ->setAd($ad)
+                    ->setCreatedAt($createdAt)
+                    ->setStartDate($startDate)
+                    ->setEndDate($endDate)
+                    ->setAmount($amount)
+                    ->setComment($comment);
+
+                $manager->persist($booking1);
+
+
+            }
             $manager->persist($ad);
         }
         $manager->flush();

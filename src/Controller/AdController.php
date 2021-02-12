@@ -96,6 +96,7 @@ class AdController extends AbstractController
      */
     public function edit(Ad $ad, Request $request, EntityManagerInterface $manager){
         $form= $this->createForm(AdType::class, $ad);
+
         $form->handleRequest($request);
         if($form->isSubmitted()&& $form->isValid()){
             foreach ($ad->getImages() as$image){
@@ -134,7 +135,7 @@ class AdController extends AbstractController
       ]);
     }
     /**
-     *
+     *permet de supprimer une annonce
      */
     /**
      *@Route("/ads/{slug}/delete", name= "ads_delete")
