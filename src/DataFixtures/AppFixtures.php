@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Ad;
 use App\Entity\Booking;
 use App\Entity\Booking1;
+use App\Entity\Comment;
 use App\Entity\Image;
 
 
@@ -136,6 +137,16 @@ $manager->persist($image);
 
                 $manager->persist($booking1);
 
+                // gestion des commentaires
+                // on va tirer pile ou face si ça tombe sur 0 le if ne se fera pas.on ne vx pas laiss un comm sur tte les reseravtions
+                if (mt_rand(0,1)){
+                    $comment = new Comment();
+                    $comment->setContent($faker->paragraph)
+                        ->setRating(mt_rand(1,5))
+                        ->setAuthor($booker)
+                        ->setAd($ad);
+                    $manager->persist($comment);
+                }
 
             }
             $manager->persist($ad);

@@ -3,8 +3,15 @@
 <div class="col-md-4">
     <div class="card bg-light mt-3">
         <div class="card-header text-center">
-            {{ ad.rooms }} chambres, <strong> {{ ad.price }}&euro;/nuit</strong><br>
+            {{ ad.rooms }} chambres, <strong> {{ ad.price| number_format('2',',','') }}&euro;/nuit</strong><br>
+            {# si le nbre de commentaires qui sont dans l'annonce est superieure à 0 on affiche ds moy sur l ensb des ad #}
+            {# filtre length permet de renvoyer le nbr d 'elemnts d'ue sequence(commentaires)  #}
+            {% if ad.comments |length> 0 %}
+            {% include 'partials/rating.html.twig' with {'rating':ad.getAvgRating} %}
+                {% else %}
             <small> pas encore note</small>
+
+            {% endif %}
         </div>
         <a href="{{ url }}">
             <img src="{{ ad.coverImage }}" alt="l'image de l'appartement" style=" height: 200px; width: 100%; display: block">
@@ -18,7 +25,7 @@
             <P class="card-text">
                 {{ ad.introduction }}
             </P>
-            <a href="{{ url }}" class="btn btn-secondary"> voir l'annonce</a>
+            <a href="{{ url }}" class="btn btn-primary float-right"> voir l'annonce</a>
             {% if app.user and app.user == ad.author %}
                 <a href="{{ path('ads_edit', {'slug':ad.slug}) }}" class="btn btn-secondary">modifier l'annonce</a>
             {% endif %}

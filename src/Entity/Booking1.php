@@ -35,7 +35,8 @@ class Booking1
      * @ORM\Column(type="datetime")
      * @Assert\Type("\Datetime")
      * @Assert\NotBlank(message="la date de construction ne peut pas etre vide")
-     * @Assert\GreaterThan("today",message="la date d'arrivée doit etre ulterieure que celle d'aujourd'hui!")
+     * @Assert\GreaterThan("today",message="la date d'arrivée doit etre ulterieure que celle d'aujourd'hui!",
+     *      groups={"front"})
      */
     private $startDate;
 
@@ -62,10 +63,11 @@ class Booking1
      */
     private $comment;
     /**
-     * Callback appélé à chaque fois qu'on réserve une annonce
+     * Callback appélé à chaque fois qu'on réserve une annonce ou à chak fois on la mise à jour
      */
     /**
      * @ORM\PrePersist
+     * @ORM\PreUpdate
      */
     public function prepersist()
     {

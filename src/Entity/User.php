@@ -92,6 +92,11 @@ class User implements UserInterface
      */
     private $booking1s;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="author", orphanRemoval=true)
+     */
+    private $comments;
+
 
 
 
@@ -125,6 +130,7 @@ class User implements UserInterface
         $this->userRoles2 = new ArrayCollection();
 
         $this->booking1s = new ArrayCollection();
+        $this->comments = new ArrayCollection();
 
     }
 
@@ -355,6 +361,36 @@ class User implements UserInterface
             // set the owning side to null (unless already changed)
             if ($booking1->getBooker() === $this) {
                 $booking1->setBooker(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Comment[]
+     */
+    public function getComments(): Collection
+    {
+        return $this->comments;
+    }
+
+    public function addComment(Comment $comment): self
+    {
+        if (!$this->comments->contains($comment)) {
+            $this->comments[] = $comment;
+            $comment->setAuthor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeComment(Comment $comment): self
+    {
+        if ($this->comments->removeElement($comment)) {
+            // set the owning side to null (unless already changed)
+            if ($comment->getAuthor() === $this) {
+                $comment->setAuthor(null);
             }
         }
 

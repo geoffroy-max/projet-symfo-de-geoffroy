@@ -5,7 +5,7 @@
 {% block body %}
 
     <div class="container">
-        <h1>votre réservation (n°{{ booking1.id }})</h1>
+        <h1 class="my-5">votre réservation (n°{{ booking1.id }})</h1>
         {% if app.request.query.get('withAlert') %}
 
         <div class="alert alert-success">
@@ -30,9 +30,9 @@
                         <dt class="col md-4">Nombre de nuits</dt>
                         <dd class="col md-8">{{ booking1.Duration }}</dd>
                         <dt class="col md-4">le Montant total</dt>
-                        <dd class="col md-8">{{ booking1.amount }}&euro;</dd>
+                        <dd class="col md-8">{{ booking1.amount|number_format(2,',','') }}&euro;</dd>
                         <dt class="col md-4">Commentaire</dt>
-                        <dd class="col md-8">{{ booking1.comment }}</dd>
+                        <dd class="col md-8">{{ booking1.comment| default('aucun commentaire') }}</dd>
                     </dl>
 
                     <hr>
@@ -51,6 +51,31 @@
                     </div>
                     {{ booking1.ad.author.description|raw }}
                     <a href="{{ path('user_show',{'slug':booking1.ad.author.slug}) }}" class="btn btn-primary">plus d'info sur {{ booking1.ad.author.fullName }}</a>
+                </div>
+                <div class="alert alert-light" id="#comment">
+                    <h2 class="alert-heading"> votre avis compte!</h2>
+                    {# si la date d'aujourd'hui est > à la date de depart on affiche le formulaire sinon rien #}
+
+                    {% if date()> date(booking1.endDate) %}
+                        {% set comment = booking1.ad.CommentFromAuthor(app.user)%}
+
+                        {% if comment is not null %}
+                            <blockquote>
+                                {{ comment.content }}
+                            </blockquote>
+                            <strong> Note:</strong>{% include 'partials/rating.html.twig ' with {'rating':comment.rating}%}
+
+                            {% else %}
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        <button type="submit" class="btn btn-success">confirme!</button>
+                        {{ form_end(form) }}
+                            {% endif %}
+
+                    {% else %}
+                        <p> votre sejour n'a pas encore eu fin vous ne pouvez pas laisser un commentaire </p>
+                    {% endif %}
+
                 </div>
             </div>
             <div class="col">

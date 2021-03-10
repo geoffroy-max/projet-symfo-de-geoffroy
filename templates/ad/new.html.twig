@@ -11,9 +11,40 @@
 
         <h1>creer une nouvelle annonce</h1>
                 {{ form_start(form) }}
+           <div class="row">
+               <div class="col">
+                   <div class="alert alert-light">
+                       <h2>Information generale</h2>
+                       <hr>
+                       {{ form_row(form.title) }}
+                       {{ form_row(form.slug) }}
+                       {{ form_row(form.price) }}
+                       {{ form_row(form.rooms) }}
+                   </div>
+                   <div class="alert alert-light">
+                       <h2> Les details</h2>
+                       <hr>
+                       {{ form_row(form.introduction) }}
+                       {{ form_row(form.content) }}
 
-               {{ form_widget(form) }}
-                <button class="btn btn-primary"> creer une annonce</button>
+                   </div>
+               </div>
+               <div class="col">
+                   <div class="alert alert-light">
+                       <h2>Image de l'annonce</h2>
+                       <hr>
+                       {{ form_row(form.coverImage) }}
+                       {{ form_row(form.images) }}
+                   </div>
+               </div>
+
+           </div>
+
+        <div class="alert alert-success clearfix ">
+            <h2 class="alert alert-heading">sauvegarde mon annonce</h2>
+            <p>Vous etes sur le point d'enregistrer une annonce</p>
+            <button class="btn btn-primary float-right "> <i class="fas fa-check"></i> creer une annonce </button>
+        </div>
                   {{ form_end(form) }}
     </div>
     {% endblock %}

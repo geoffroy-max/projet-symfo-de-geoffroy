@@ -3,8 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <meta name="viewport" content="width=device-width,user-scalable=no">
         <link href="/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="{{asset('css/style.css')}}" rel="stylesheet"/>
+
+        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
         {% block stylesheets %}{% endblock %}
 
     </head>

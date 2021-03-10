@@ -40,6 +40,7 @@ $this->transformer = $transformer;
     {
         $resolver->setDefaults([
             'data_class' => Booking1::class,
+            'validation_groups'=> [ 'Default' ,'front']
         ]);
     }
 }
