@@ -12,30 +12,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c1b80e6f-1c97-4835-a281-2087ebb79627" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BookingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BookingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Booking1.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Booking1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Booking1Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Booking1Type.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/bookings.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/bookings.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/profile.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/registration.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/account/updatepass.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/updatepass.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ad/_ad.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ad/_ad.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ad/_collection.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ad/_collection.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ad/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ad/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ad/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ad/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ad/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ad/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ad/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ad/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/booking/book.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/booking/book.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/booking/show1.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/booking/show1.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/index1.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index1.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminAdController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminAdController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminCommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminCommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminReservationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/ad/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/ad/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/comment/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/comment/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/partials/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partials/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/reservation/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/reservation/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +32,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/public/css/style.css" root0="SKIP_INSPECTION" />
@@ -177,7 +169,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -243,7 +235,13 @@
       <workItem from="1614859528556" duration="32783000" />
       <workItem from="1615040946446" duration="8256000" />
       <workItem from="1615234691667" duration="5202000" />
-      <workItem from="1615314722387" duration="8314000" />
+      <workItem from="1615314722387" duration="41586000" />
+      <workItem from="1615626941888" duration="12169000" />
+      <workItem from="1615889971978" duration="5311000" />
+      <workItem from="1615982179328" duration="106000" />
+      <workItem from="1615982345680" duration="1118000" />
+      <workItem from="1615983811231" duration="9411000" />
+      <workItem from="1616146856572" duration="15987000" />
     </task>
     <servers />
   </component>
@@ -262,46 +260,8 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="57" y="0" key="#CLI_Interpreters" timestamp="1613481499130">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="57" y="0" key="#CLI_Interpreters/0.0.1366.728@0.0.1366.728" timestamp="1613481499130" />
-    <state x="361" y="124" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1610821096735">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="361" y="124" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1610821096735" />
-    <state x="394" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1612532342812">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="394" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1612532342812" />
-    <state x="357" y="70" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613568121790">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="357" y="70" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1613568121790" />
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612742760637">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1612742760637" />
-    <state x="282" y="0" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607713148266">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="282" y="0" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607713148266" />
-    <state x="357" y="0" key="FileChooserDialogImpl" timestamp="1613927128016">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="357" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1613927128016" />
-    <state x="0" y="0" key="SettingsEditor" timestamp="1613483053679">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="0" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1613483053679" />
-    <state x="170" y="156" key="run.anything.popup" timestamp="1611402896276">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="170" y="156" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1611402896276" />
-    <state x="176" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1614429690457">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="176" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1614429690457" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

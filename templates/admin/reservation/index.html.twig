@@ -19,7 +19,7 @@
         </tr>
         </thead>
         <tbody>
-        {% for booking1 in booking1s %}
+        {% for booking1 in pagination.data %}
 
         <tr>
             <td>{{booking1.id  }}</td>
@@ -36,6 +36,6 @@
       </tbody>
         
     </table>
-
+    {{ pagination.display() }}
 </div>
 {% endblock %}
