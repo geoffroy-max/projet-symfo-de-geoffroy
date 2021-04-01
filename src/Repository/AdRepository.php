@@ -18,6 +18,22 @@ class AdRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Ad::class);
     }
+    public function findBestAds($limit)
+{
+    $db= $this->createQueryBuilder('a')
+            -> select('a as annonce ,AVG(c.rating) as avgRating, COUNT(c) as sumComments')
+            ->join('a.comments', 'c')
+            ->groupBy('a')
+             ->having('sumComments>3')
+            ->orderBy('avgRating', 'DESC')
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    return $db;
+
+
+    }
+
 
     // /**
     //  * @return Ad[] Returns an array of Ad objects

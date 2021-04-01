@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -11,15 +14,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1b80e6f-1c97-4835-a281-2087ebb79627" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AirBNB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AirBNB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminAdController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminAdController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminCommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminCommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminReservationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/ad/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/ad/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/comment/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/comment/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AdRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AdRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/account/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/account/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/partials/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partials/header.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/reservation/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/reservation/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/home.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +43,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,9 +61,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/public/css/style.css" root0="SKIP_INSPECTION" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -151,6 +169,7 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jprx3AgwDih2KsEzaBLArbXlwP" />
@@ -161,6 +180,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -169,16 +189,20 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\AirBNB\public" />
+      <recent name="C:\Users\PC\AirBNB\assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\AirBNB\asset" />
+      <recent name="C:\Users\PC\AirBNB\public" />
+      <recent name="C:\Users\PC\AirBNB\assets" />
+      <recent name="C:\Users\PC\AirBNB\templates\admin\dashbord" />
       <recent name="C:\Users\PC\AirBNB\templates\admin\reservation" />
-      <recent name="C:\Users\PC\AirBNB\templates\admin\comment" />
-      <recent name="C:\Users\PC\AirBNB\templates\admin" />
-      <recent name="C:\Users\PC\AirBNB\templates\admin\account\ad" />
-      <recent name="C:\Users\PC\AirBNB\templates\admin\account" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -241,7 +265,20 @@
       <workItem from="1615982179328" duration="106000" />
       <workItem from="1615982345680" duration="1118000" />
       <workItem from="1615983811231" duration="9411000" />
-      <workItem from="1616146856572" duration="15987000" />
+      <workItem from="1616146856572" duration="27755000" />
+      <workItem from="1616416246125" duration="21830000" />
+      <workItem from="1616497423374" duration="17072000" />
+      <workItem from="1616580579031" duration="6133000" />
+      <workItem from="1616691132956" duration="3352000" />
+      <workItem from="1616766920582" duration="18512000" />
+      <workItem from="1617017390744" duration="26245000" />
+      <workItem from="1617134007004" duration="2788000" />
+      <workItem from="1617147946498" duration="3556000" />
+      <workItem from="1617191535519" duration="2883000" />
+      <workItem from="1617195989199" duration="275000" />
+      <workItem from="1617196312970" duration="5637000" />
+      <workItem from="1617206631713" duration="2595000" />
+      <workItem from="1617281694808" duration="2991000" />
     </task>
     <servers />
   </component>
@@ -259,6 +296,17 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/blog/home.html.twig</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -3,6 +3,7 @@
 {% block title %}airBNB!{% endblock %}
 
 {% block body %}
+
     <div class="container">
 
     <div class="jumbotron mt-5">
@@ -18,7 +19,11 @@
 
         <h2 class="h1 my-5">nos appartements starts</h2>
         <div class="row mb-3">
-            <div class="col-md-4">
+
+            {% for data in ads %}
+                {% include 'ad/_ad.html.twig' with {'ad':data.annonce} %}
+            {% endfor %}
+           {# <div class="col-md-4">
                 <div class="card bg-light mt-3">
                     <div class="card-header text-center">
                         3 chambres, <strong> 50&euro;/nuit</strong><br>
@@ -70,13 +75,28 @@
                         </P>
                         <a href="" class="btn btn-secondary"> voir l'annonce</a>
                     </div>
+                        </div>
+                </div>#}
 
-                </div>
-    </div>
 </div>
 <h2 class="h1 my-5">proprietaires starts</h2>
 <div class="row">
+    {% for data in users %}
     <div class="col">
+        <div class="card border-secondary mb-3">
+            <div class="card-body">
+                <h4 class="card-title">
+                    {{ data.user.fullName }}
+                </h4>
+                <div class="card-text">
+                    <img src="{{ data.user.picture }}" alt="avatar de {{ data.user.fullName }}"  class="float-left mr-3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, tempore!</p>
+                    <a href="{{ path('user_show',{'slug':data.user.slug}) }}" class="btn btn-success float-right">en savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {#<div class="col">
         <div class="card border-secondary mb-3">
             <div class="card-body">
                 <h4 class="card-title">
@@ -89,21 +109,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col">
-        <div class="card border-secondary mb-3">
-            <div class="card-body">
-                <h4 class="card-title">
-                    geoffroy
-                </h4>
-                <div class="card-text">
-                    <img src="https://via.placeholder.com/64x64" alt="avatar de geoffroy"  class="float-left mr-3">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, tempore!</p>
-                    <a href="" class="btn btn-success float-right">en savoir plus</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div>  #}
+    {% endfor %}
 </div>
     </div>
 

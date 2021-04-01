@@ -40,7 +40,7 @@ $faker= Factory::create('fr_FR');
            $adminUser->setFirstName('geoffroy')
                ->setLastName('ndongo')
                ->setEmail('ndongogeoffroy10@yahoo.fr')
-               ->setPicture('https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/88183228_2828237450576053_609058510403010560_n.jpg?_nc_cat=108&ccb=2&_nc_sid=e3f864&_nc_ohc=mLupm0eAKjoAX-Uh295&_nc_ht=scontent-cdg2-1.xx&oh=d446bc8a4e51dd6fbb2219897d11393d&oe=6017C976')
+               ->setPicture('https://media.routard.com/image/20/4/photo.1595204.jpeg')
                ->setIntroduction($faker->sentence())
                ->setHash($this->encoder->encodePassword($adminUser, 'password'))
                ->setDescription('<p>' . join($faker->paragraphs(3), '</p><p>') . '</p>')

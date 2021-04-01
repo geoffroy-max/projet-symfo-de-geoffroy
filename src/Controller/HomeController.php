@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
+use App\Repository\AdRepository;
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class BlogController extends AbstractController
+class HomeController extends AbstractController
 {
     /**
      * permet d 'afficher la page d'accueil
@@ -14,10 +16,13 @@ class BlogController extends AbstractController
     /**
      * @Route("/", name="blog")
      */
-    public function home(): Response
+    public function home(AdRepository $ad ,UserRepository $userRepo): Response
     {
+$query= $ad->findBestAds(3);
+
         return $this->render('blog/home.html.twig', [
-            'controller_name' => 'BlogController',
+            'ads'=>$query,
+            'users'=>$userRepo->findBestUsers()
         ]);
     }
 }
