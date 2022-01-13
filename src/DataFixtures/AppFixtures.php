@@ -113,7 +113,7 @@ $manager->persist($image);
 
             for($k=1; $k<= mt_rand(0,10); $k++)
             {
-                $booking1= new Booking1();
+              $booking1= new Booking1();
 
                 $createdAt = $faker->dateTimeBetween('-6 months');
                 $startDate = $faker->dateTimeBetween('-3 months');
